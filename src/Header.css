@@ -1,0 +1,18 @@
+.Header {
+  background: #ffc44f;
+}
+
+h1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 80px;
+  color: #882eb3;
+}
+
+h2 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 30px;
+}
+
+.btn-dark {
+  margin: 5px;
+}
