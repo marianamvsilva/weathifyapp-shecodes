@@ -1,7 +1,13 @@
-.btn-primary {
-  background-color: #882eb3;
-  border-color: #882eb3;
-  margin: 0 10px;
+.btn button {
+  font-size: 15px;
+  display: block;
+  background: #882eb3;
+  padding: 10px 20px;
+  color: white;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+  border: none;
+  margin: 0 auto;
 }
 
 .Search {

@@ -35,7 +35,9 @@ export default function Search(props) {
               size="30"
               onChange={updateCity}
             />
-            <input type="submit" value="Search" className="btn btn-primary" />
+            <div className="btn">
+              <button>Take me there!</button>
+            </div>
           </form>
         </div>
       </div>
