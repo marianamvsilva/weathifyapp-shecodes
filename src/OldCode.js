@@ -36,3 +36,64 @@
     </div>
   );
 }*/
+
+
+  if (submitted) {
+    return (
+      <div className="Search">
+        <form className="form" onSubmit={handleSubmit}>
+          <input
+            type="text"
+            id="city"
+            placeholder="I feel like going to..."
+            autofocus="on"
+            size="30"
+            onChange={updateCity}
+          />
+          <div className="btn">
+            <button>Take me there!</button>
+          </div>
+        </form>
+        <div className="row">
+          <div className="col-6">
+            <h1>{city}</h1>
+            <h2>{Math.round(temperature)}°C</h2>
+            <p id="timestamp" className="weatheritems">
+              Saturday, 13:05
+            </p>
+            <ul className="weather-details">
+              <li>
+                <strong>Humidity:</strong> {Math.round(humidity)}%
+              </li>
+              <li>
+                <strong>Wind:</strong> {wind}km/h
+              </li>
+            </ul>
+          </div>
+          <div className="col-6">
+            <Slogan />
+            <img src={icon} alt={description} /> {description}
+          </div>
+        </div>
+      </div>
+    );
+  } else {
+    return (
+      <div className="Search">
+        <form className="form" onSubmit={handleSubmit}>
+          <input
+            type="text"
+            id="city"
+            placeholder="I feel like going to..."
+            autofocus="on"
+            size="30"
+            onChange={updateCity}
+          />
+          <div className="btn">
+            <button>Take me there!</button>
+          </div>
+        </form>
+      </div>
+    );
+  }
+}

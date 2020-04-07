@@ -34,64 +34,34 @@ export default function Weather(props) {
     axios.get(apiUrl).then(loadWeather);
   }
 
-  if (submitted) {
-    return (
-      <div className="Search">
-        <form className="form" onSubmit={handleSubmit}>
-          <input
-            type="text"
-            id="city"
-            placeholder="I feel like going to..."
-            autofocus="on"
-            size="30"
-            onChange={updateCity}
-          />
-          <div className="btn">
-            <button>Take me there!</button>
-          </div>
-        </form>
-        <div className="row">
-          <div className="col-6">
-            <h1>{city}</h1>
-            <ul className="weather-details">
-              <li>
-                <strong>Temperature:</strong> {Math.round(temperature)}°C
-              </li>
-              <li>
-                <strong>Description:</strong> {description}
-              </li>
-              <li>
-                <strong>Humidity:</strong> {Math.round(humidity)}%
-              </li>
-              <li>
-                <strong>Wind:</strong> {wind}km/h
-              </li>
-            </ul>
-          </div>
-          <div className="col-6">
-            <Slogan />
-            <img src={icon} alt={description} />
-          </div>
+  return (
+    <div className="Search">
+      <form className="form" onSubmit={handleSubmit}>
+        <input
+          type="text"
+          id="city"
+          placeholder="I feel like going to..."
+          autofocus="on"
+          size="30"
+          onChange={updateCity}
+        />
+        <div className="btn">
+          <button>Take me there!</button>
+        </div>
+      </form>
+      <div className="row">
+        <div className="col-6">
+          <h1>{city}</h1>
+          <p>Saturday, 13:05</p>
+          <h2>{Math.round(temperature)}°C</h2>
+          <p>Humidity:{Math.round(humidity)}%</p>
+          <p>Wind: {wind}km/h</p>
+        </div>
+        <div className="col-6">
+          <Slogan />
+          <img src={icon} alt={description} /> {description}
         </div>
       </div>
-    );
-  } else {
-    return (
-      <div className="Search">
-        <form className="form" onSubmit={handleSubmit}>
-          <input
-            type="text"
-            id="city"
-            placeholder="I feel like going to..."
-            autofocus="on"
-            size="30"
-            onChange={updateCity}
-          />
-          <div className="btn">
-            <button>Take me there!</button>
-          </div>
-        </form>
-      </div>
-    );
-  }
+    </div>
+  );
 }

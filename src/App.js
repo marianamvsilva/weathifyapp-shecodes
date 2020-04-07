@@ -1,7 +1,8 @@
 import React from "react";
 import "./Styles.css";
-import Weather from "./Weather";
 import Header from "./Header";
+import Weather from "./Weather";
+import Forecast from "./Forecast";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 export default function App() {
@@ -10,6 +11,7 @@ export default function App() {
       <Header />
       <br />
       <Weather />
+      <Forecast />
       <br />
       <footer>
         This project was coded by{" "}
