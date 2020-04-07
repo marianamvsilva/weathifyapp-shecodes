@@ -71,19 +71,21 @@ export default function Search(props) {
     );
   } else {
     return (
-      <form className="form" onSubmit={handleSubmit}>
-        <input
-          type="text"
-          id="city"
-          placeholder="I feel like going to..."
-          autofocus="on"
-          size="30"
-          onChange={updateCity}
-        />
-        <div className="btn">
-          <button>Take me there!</button>
-        </div>
-      </form>
+      <div className="Search">
+        <form className="form" onSubmit={handleSubmit}>
+          <input
+            type="text"
+            id="city"
+            placeholder="I feel like going to..."
+            autofocus="on"
+            size="30"
+            onChange={updateCity}
+          />
+          <div className="btn">
+            <button>Take me there!</button>
+          </div>
+        </form>
+      </div>
     );
   }
 }

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Slogan from "./Slogan";
 import "./Weather.css";
 import Forecast from "./Forecast";
@@ -18,7 +18,7 @@ export default function Weather(props) {
           <div className="col col-md-8">
             <div className="row">
               <div className="col-md-4">
-                <span>city</span>,<span>replace here</span>
+                <span>City</span>
                 <div className="temperature">25ºC</div>
                 <p id="timestamp" className="weatheritems">
                   Saturday, 13:05
