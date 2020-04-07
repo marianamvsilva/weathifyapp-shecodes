@@ -2,9 +2,8 @@ import React, { useState } from "react";
 import axios from "axios";
 import "./Search.css";
 
-/*export default class Search extends Component {*/
 export default function Search(props) {
-  const [city, setCity] = useState(null);
+  const [city, setCity] = useState("Lisbon");
   const [temperature, setTemperature] = useState();
   const [humidity, setHumidity] = useState();
   const [wind, setWind] = useState();
@@ -36,10 +35,19 @@ export default function Search(props) {
 
   if (submitted) {
     return (
-      <div>
-        <form onSubmit={handleSubmit}>
-          <input type="text" placeholder="Type a city" onChange={updateCity} />
-          <input type="submit" value="Search" />
+      <div className="Search">
+        <form className="form" onSubmit={handleSubmit}>
+          <input
+            type="text"
+            id="city"
+            placeholder="I feel like going to..."
+            autofocus="on"
+            size="30"
+            onChange={updateCity}
+          />
+          <div className="btn">
+            <button>Take me there!</button>
+          </div>
         </form>
         <h1>{city}</h1>
         <ul className="weather-details">
@@ -63,34 +71,19 @@ export default function Search(props) {
     );
   } else {
     return (
-      <form onSubmit={handleSubmit}>
-        <input type="text" placeholder="Type a city" onChange={updateCity} />
-        <input type="submit" value="Search" />
+      <form className="form" onSubmit={handleSubmit}>
+        <input
+          type="text"
+          id="city"
+          placeholder="I feel like going to..."
+          autofocus="on"
+          size="30"
+          onChange={updateCity}
+        />
+        <div className="btn">
+          <button>Take me there!</button>
+        </div>
       </form>
     );
   }
 }
-
-/*return (
-  <div className="destination content-section">
-    <div className="container text-center">
-      <h3>What's that city that doesn't let you sleep?</h3>
-      <div>
-        <form className="form" onSubmit={handleSubmit}>
-          <input
-            type="text"
-            id="city"
-            placeholder="I feel like going to..."
-            autofocus="on"
-            size="30"
-            onChange={updateCity}
-          />
-          <div className="btn">
-            <button>Take me there!</button>
-          </div>
-        </form>
-      </div>
-    </div>
-    <h2>{city}</h2>
-  </div>
-);*/
