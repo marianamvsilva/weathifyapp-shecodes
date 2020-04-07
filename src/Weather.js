@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import Slogan from "./Slogan";
 import "./Search.css";
 
 export default function Weather(props) {
@@ -49,24 +50,29 @@ export default function Weather(props) {
             <button>Take me there!</button>
           </div>
         </form>
-        <h1>{city}</h1>
-        <ul className="weather-details">
-          <li>
-            <strong>Temperature:</strong> {Math.round(temperature)}°C
-          </li>
-          <li>
-            <strong>Description:</strong> {description}
-          </li>
-          <li>
-            <strong>Humidity:</strong> {Math.round(humidity)}%
-          </li>
-          <li>
-            <strong>Wind:</strong> {wind}km/h
-          </li>
-          <li>
+        <div className="row">
+          <div className="col-6">
+            <h1>{city}</h1>
+            <ul className="weather-details">
+              <li>
+                <strong>Temperature:</strong> {Math.round(temperature)}°C
+              </li>
+              <li>
+                <strong>Description:</strong> {description}
+              </li>
+              <li>
+                <strong>Humidity:</strong> {Math.round(humidity)}%
+              </li>
+              <li>
+                <strong>Wind:</strong> {wind}km/h
+              </li>
+            </ul>
+          </div>
+          <div className="col-6">
+            <Slogan />
             <img src={icon} alt={description} />
-          </li>
-        </ul>
+          </div>
+        </div>
       </div>
     );
   } else {
