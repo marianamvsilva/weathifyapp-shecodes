@@ -1,30 +1,35 @@
 import React, { useState } from "react";
 import axios from "axios";
 import Slogan from "./Slogan";
-import "./Search.css";
+import WeatherNow from "./WeatherNow";
+import "./Weather.css";
 
 export default function Weather(props) {
-  const [city, setCity] = useState("Lisbon");
-  const [temperature, setTemperature] = useState();
+  const [city, setCity] = useState("");
+  const [weatherData, setWeatherData] = useState({});
+  /*const [loaded, setLoaded] = useState(false);*/
+
+  /*const [temperature, setTemperature] = useState();
   const [humidity, setHumidity] = useState();
   const [wind, setWind] = useState();
   const [description, setDescription] = useState();
-  const [icon, setIcon] = useState();
-  const [submitted, setSubmitted] = useState(false);
+  const [icon, setIcon] = useState();*/
+  /*const [submitted, setSubmitted] = useState(false);*/
 
   function updateCity(event) {
     setCity(event.target.value);
   }
 
   function loadWeather(response) {
-    setSubmitted(true); /*Loaded when I get the response from the API*/
-    setTemperature(response.data.main.temp);
-    setHumidity(response.data.main.humidity);
-    setWind(response.data.wind.speed);
-    setDescription(response.data.weather[0].description);
-    setIcon(
-      `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
-    );
+    console.log(response.data);
+    /*setLoaded(true);*/
+    setWeatherData({
+      temperature: response.data.main.temp,
+      wind: response.data.wind.speed,
+      humidity: response.data.main.humidity,
+      icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
+      description: response.data.weather[0].description,
+    });
   }
 
   function handleSubmit(event) {
@@ -51,17 +56,19 @@ export default function Weather(props) {
       </form>
       <div className="row">
         <div className="col-6">
-          <h1>{city}</h1>
+          <h1 className="text-capitalize">{city}</h1>
           <p>Saturday, 13:05</p>
-          <h2>{Math.round(temperature)}°C</h2>
-          <p>Humidity:{Math.round(humidity)}%</p>
-          <p>Wind: {wind}km/h</p>
+          <h2>{Math.round(weatherData.temperature)}°C</h2>
+          <p>Humidity: {Math.round(weatherData.humidity)}%</p>
+          <p>Wind: {weatherData.wind}km/h</p>
         </div>
         <div className="col-6">
           <Slogan />
-          <img src={icon} alt={description} /> {description}
+          <img src={weatherData.icon} alt={weatherData.description} />{" "}
+          <span className="text-capitalize">{weatherData.description}</span>
         </div>
       </div>
+      <WeatherNow />
     </div>
   );
 }
