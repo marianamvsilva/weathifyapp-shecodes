@@ -1,22 +1,19 @@
 import React, { useState } from "react";
 import axios from "axios";
-import Slogan from "./Slogan";
+import WeatherSlogan from "./WeatherSlogan";
 import WeatherInfo from "./WeatherInfo";
 /*import FriendlyDate from "./FriendlyDate";*/
 import "./Weather.css";
 
 export default function Weather(props) {
+  const [weatherData, setWeatherData] = useState({ ready: false });
   const [city, setCity] = useState(props.defaultCity);
-  const [weatherData, setWeatherData] = useState({});
-
-  function updateCity(event) {
-    setCity(event.target.value);
-  }
 
   function loadWeather(response) {
     console.log(response.data);
     /*setLoaded(true);*/
     setWeatherData({
+      ready: true,
       city: response.data.name,
       temperature: response.data.main.temp,
       date: new Date(response.data.dt * 1000),
@@ -32,6 +29,10 @@ export default function Weather(props) {
     let apiKey = "020587e6f2a6601e01854941fcf9435b";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(loadWeather);
+  }
+
+  function updateCity(event) {
+    setCity(event.target.value);
   }
 
   return (
@@ -52,10 +53,10 @@ export default function Weather(props) {
       <div className="row">
         <div className="col-6">
           <h1 className="text-capitalize">{city}</h1>
-          <WeatherInfo data={weatherData} />
+          <WeatherInfo data={weatherData} defaultCity="Amman" />
         </div>
         <div className="col-6">
-          <Slogan />
+          <WeatherSlogan />
           <img src={weatherData.icon} alt={weatherData.description} />{" "}
           <span className="text-capitalize">{weatherData.description}</span>
         </div>
