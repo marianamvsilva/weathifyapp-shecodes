@@ -1,11 +1,11 @@
 import React from "react";
 
-export default function WeatherNow() {
+export default function WeatherNow(props) {
   return (
-    <div>
-      <h1>CIDADE</h1>
-      <p>Saturday, 13:05</p>
-      <h2>XX°C</h2>
+    <div className="WeatherNow">
+      <h1>{props.data.city}</h1>
+      <p>Humidity: {props.data.humidity}%</p>
+      <p>Wind: {props.data.wind} km/h</p>
     </div>
   );
 }

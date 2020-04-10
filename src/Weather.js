@@ -2,19 +2,12 @@ import React, { useState } from "react";
 import axios from "axios";
 import Slogan from "./Slogan";
 import WeatherNow from "./WeatherNow";
+import FriendlyDate from "./FriendlyDate";
 import "./Weather.css";
 
 export default function Weather(props) {
   const [city, setCity] = useState("");
   const [weatherData, setWeatherData] = useState({});
-  /*const [loaded, setLoaded] = useState(false);*/
-
-  /*const [temperature, setTemperature] = useState();
-  const [humidity, setHumidity] = useState();
-  const [wind, setWind] = useState();
-  const [description, setDescription] = useState();
-  const [icon, setIcon] = useState();*/
-  /*const [submitted, setSubmitted] = useState(false);*/
 
   function updateCity(event) {
     setCity(event.target.value);
@@ -25,6 +18,7 @@ export default function Weather(props) {
     /*setLoaded(true);*/
     setWeatherData({
       temperature: response.data.main.temp,
+      date: new Date(response.data.dt * 1000),
       wind: response.data.wind.speed,
       humidity: response.data.main.humidity,
       icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
@@ -57,7 +51,7 @@ export default function Weather(props) {
       <div className="row">
         <div className="col-6">
           <h1 className="text-capitalize">{city}</h1>
-          <p>Saturday, 13:05</p>
+          <FriendlyDate date={weatherData.date} />
           <h2>{Math.round(weatherData.temperature)}°C</h2>
           <p>Humidity: {Math.round(weatherData.humidity)}%</p>
           <p>Wind: {weatherData.wind}km/h</p>
@@ -68,7 +62,7 @@ export default function Weather(props) {
           <span className="text-capitalize">{weatherData.description}</span>
         </div>
       </div>
-      <WeatherNow />
+      <WeatherNow data={weatherData} />
     </div>
   );
 }
