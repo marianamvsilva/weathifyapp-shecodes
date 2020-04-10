@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import Slogan from "./Slogan";
-import WeatherNow from "./WeatherNow";
+import WeatherInfo from "./WeatherInfo";
 import FriendlyDate from "./FriendlyDate";
 import "./Weather.css";
 
@@ -53,8 +53,7 @@ export default function Weather(props) {
           <h1 className="text-capitalize">{city}</h1>
           <FriendlyDate date={weatherData.date} />
           <h2>{Math.round(weatherData.temperature)}°C</h2>
-          <p>Humidity: {Math.round(weatherData.humidity)}%</p>
-          <p>Wind: {weatherData.wind}km/h</p>
+          <WeatherInfo data={weatherData} />
         </div>
         <div className="col-6">
           <Slogan />
@@ -62,7 +61,6 @@ export default function Weather(props) {
           <span className="text-capitalize">{weatherData.description}</span>
         </div>
       </div>
-      <WeatherNow data={weatherData} />
     </div>
   );
 }
