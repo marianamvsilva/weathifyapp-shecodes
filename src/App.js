@@ -1,11 +1,22 @@
-import React from "react";
+/*import React from "react";
 import "./Styles.css";
 import Header from "./Header";
 import Weather from "./Weather";
 import WeatherForecast from "./WeatherForecast";
+import "bootstrap/dist/css/bootstrap.min.css";*/
+
+import React, { useState } from "react";
+import "./App.css";
+import Weather from "./Weather";
+import Header from "./Header";
+import WeatherForecast from "./WeatherForecast";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 export default function App() {
+  let [city, setCity] = useState("Lisbon");
+  let [weatherInfo, setWeatherInfo] = useState({});
+
+  /*export default function App() {*/
   return (
     <div className="App">
       <Header />
