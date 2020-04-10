@@ -2,11 +2,11 @@ import React, { useState } from "react";
 import axios from "axios";
 import Slogan from "./Slogan";
 import WeatherInfo from "./WeatherInfo";
-import FriendlyDate from "./FriendlyDate";
+/*import FriendlyDate from "./FriendlyDate";*/
 import "./Weather.css";
 
 export default function Weather(props) {
-  const [city, setCity] = useState("");
+  const [city, setCity] = useState(props.defaultCity);
   const [weatherData, setWeatherData] = useState({});
 
   function updateCity(event) {
@@ -17,6 +17,7 @@ export default function Weather(props) {
     console.log(response.data);
     /*setLoaded(true);*/
     setWeatherData({
+      city: response.data.name,
       temperature: response.data.main.temp,
       date: new Date(response.data.dt * 1000),
       wind: response.data.wind.speed,
@@ -51,8 +52,6 @@ export default function Weather(props) {
       <div className="row">
         <div className="col-6">
           <h1 className="text-capitalize">{city}</h1>
-          <FriendlyDate date={weatherData.date} />
-          <h2>{Math.round(weatherData.temperature)}°C</h2>
           <WeatherInfo data={weatherData} />
         </div>
         <div className="col-6">
