@@ -7,9 +7,11 @@ import "./Weather.css";
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
   const [city, setCity] = useState(props.defaultCity);
+  const [submitted, setSubmitted] = useState(false);
 
   function loadWeather(response) {
     console.log(response.data);
+    setSubmitted(true);
     setWeatherData({
       ready: true,
       city: response.data.name,
@@ -37,8 +39,36 @@ export default function Weather(props) {
     setCity(event.target.value);
   }
 
-  return (
-    <div className="Search">
+  if (submitted) {
+    return (
+      <div className="Search">
+        <form className="form" onSubmit={handleSubmit}>
+          <input
+            type="text"
+            id="city"
+            placeholder="I feel like going to..."
+            autofocus="on"
+            size="30"
+            onChange={updateCity}
+          />
+          <div className="btn">
+            <button>Take me there!</button>
+          </div>
+        </form>
+        <div className="row">
+          <div className="col-6">
+            <WeatherInfo data={weatherData} />
+          </div>
+          <div className="col-6">
+            <WeatherSlogan />
+            <img src={weatherData.icon} alt={weatherData.description} />{" "}
+            <span className="text-capitalize">{weatherData.description}</span>
+          </div>
+        </div>
+      </div>
+    );
+  } else {
+    return (
       <form className="form" onSubmit={handleSubmit}>
         <input
           type="text"
@@ -52,16 +82,6 @@ export default function Weather(props) {
           <button>Take me there!</button>
         </div>
       </form>
-      <div className="row">
-        <div className="col-6">
-          <WeatherInfo data={weatherData} />
-        </div>
-        <div className="col-6">
-          <WeatherSlogan />
-          <img src={weatherData.icon} alt={weatherData.description} />{" "}
-          <span className="text-capitalize">{weatherData.description}</span>
-        </div>
-      </div>
-    </div>
-  );
+    );
+  }
 }
