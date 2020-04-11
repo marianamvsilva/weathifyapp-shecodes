@@ -60,7 +60,7 @@ export default function Weather(props) {
             <WeatherInfo data={weatherData} />
           </div>
           <div className="col-6">
-            <WeatherSlogan />
+            <WeatherSlogan data={weatherData} />
             <img src={weatherData.icon} alt={weatherData.description} />{" "}
             <span className="text-capitalize">{weatherData.description}</span>
           </div>
