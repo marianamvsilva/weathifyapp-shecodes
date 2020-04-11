@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "./Header";
-import Search from "./Search";
+import Weather from "./Weather";
 import WeatherForecast from "./WeatherForecast";
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -9,7 +9,7 @@ export default function App() {
     <div className="App">
       <Header />
       <br />
-      <Search />
+      <Weather defaultCity="Amman" />
       <WeatherForecast />
       <br />
       <footer>
