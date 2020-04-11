@@ -30,6 +30,10 @@ h2 {
   border: none;
   margin: 0 auto;
 }
+.container {
+  background: red;
+  margin: 0px 100px;
+}
 
 .Search {
   text-align: center;

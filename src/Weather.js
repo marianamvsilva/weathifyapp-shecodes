@@ -2,16 +2,17 @@ import React, { useState } from "react";
 import axios from "axios";
 import WeatherSlogan from "./WeatherSlogan";
 import WeatherInfo from "./WeatherInfo";
+import WeatherForecast from "./WeatherForecast";
 import "./Weather.css";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
   const [city, setCity] = useState(props.defaultCity);
-  const [submitted, setSubmitted] = useState(false);
+  /*const [submitted, setSubmitted] = useState(false);*/
 
   function loadWeather(response) {
     console.log(response.data);
-    setSubmitted(true);
+    /*setSubmitted(true);*/
     setWeatherData({
       ready: true,
       city: response.data.name,
@@ -39,7 +40,7 @@ export default function Weather(props) {
     setCity(event.target.value);
   }
 
-  if (submitted) {
+  if (weatherData.ready) {
     return (
       <div className="Search">
         <form className="form" onSubmit={handleSubmit}>
@@ -55,15 +56,18 @@ export default function Weather(props) {
             <button>Take me there!</button>
           </div>
         </form>
-        <div className="row">
-          <div className="col-6">
-            <WeatherInfo data={weatherData} />
+        <div className="container">
+          <div className="row">
+            <div className="col-6">
+              <WeatherInfo data={weatherData} />
+            </div>
+            <div className="col-6">
+              <WeatherSlogan data={weatherData} />
+              <img src={weatherData.icon} alt={weatherData.description} />{" "}
+              <span className="text-capitalize">{weatherData.description}</span>
+            </div>
           </div>
-          <div className="col-6">
-            <WeatherSlogan data={weatherData} />
-            <img src={weatherData.icon} alt={weatherData.description} />{" "}
-            <span className="text-capitalize">{weatherData.description}</span>
-          </div>
+          <WeatherForecast city={weatherData.city} />
         </div>
       </div>
     );
