@@ -15,6 +15,6 @@ export default function WeatherSlogan(props) {
   if (props.data.description === "shower rain" || "rain" || "snow") {
     return <div className="Slogan">Do you fancy Starbucks coffee?</div>;
   } else {
-    return <div className="Slogan">Book yourflight right away!</div>;
+    return <div className="Slogan">Book your flight right away!</div>;
   }
 }
