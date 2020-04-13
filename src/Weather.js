@@ -56,10 +56,10 @@ export default function Weather(props) {
         </form>
         <div className="container container-weather">
           <div className="row">
-            <div className="col-4">
+            <div className="col-6">
               <WeatherInfo data={weatherData} />
             </div>
-            <div className="col-8 slogan-section">
+            <div className="col-6 slogan-section">
               <img src={weatherData.icon} alt={weatherData.description} />{" "}
               <span className="text-capitalize">{weatherData.description}</span>
               <WeatherSlogan data={weatherData} />
