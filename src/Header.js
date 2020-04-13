@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./Header.css";
-import logo_weathify_1 from "./logo_weathify_1.png";
-import header_img from "./header_img.png";
+import logo_weathify_1 from "./Images/logo_weathify_1.png";
+import header_img from "./Images/header_img.png";
 
 export default class Header extends Component {
   render() {
