@@ -6,7 +6,8 @@
   font-size: 15px;
   font-family: "Roboto", sans-serif;
   border-radius: 5px;
-  padding: 5px;
+  border: none;
+  padding: 15px 20px;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
 }
 
@@ -14,7 +15,7 @@
   font-size: 15px;
   display: block;
   background: #882eb3;
-  padding: 7px 10px;
+  padding: 13px 15px;
   color: white;
   border-radius: 5px;
   border: none;
