@@ -65,6 +65,7 @@ export default function Weather(props) {
               <WeatherSlogan data={weatherData} />
             </div>
           </div>
+          <WeatherForecast city={weatherData.city} data={weatherData} />
         </div>
         <WeatherForecast city={weatherData.city} data={weatherData} />
       </div>
