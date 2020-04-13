@@ -8,12 +8,6 @@ export default function WeatherForecastPreview(props) {
     return `${hours}:00`;
   }
 
-  function temperature() {
-    let temperature = Math.round(props.data.main.temp);
-
-    return `${temperature}ºC`;
-  }
-
   return (
     <div className="WeatherForecastPreview col">
       <WeatherIcon code={props.data.weather[0].icon} />

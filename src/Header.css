@@ -8,9 +8,10 @@ h1 {
   color: #882eb3;
 }
 
-h2 {
+.Header h2 {
   font-family: "Open Sans", sans-serif;
   font-size: 30px;
+  color: red;
 }
 
 .btn-dark {

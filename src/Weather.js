@@ -8,11 +8,9 @@ import "./Weather.css";
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
   const [city, setCity] = useState(props.defaultCity);
-  /*const [submitted, setSubmitted] = useState(false);*/
 
   function loadWeather(response) {
     console.log(response.data);
-    /*setSubmitted(true);*/
     setWeatherData({
       ready: true,
       city: response.data.name,
