@@ -24,3 +24,8 @@ h1 {
 .btn-dark {
   margin: 5px;
 }
+
+.img-fluid {
+  max-width: 75%;
+  height: auto;
+}
