@@ -1,6 +1,7 @@
 import React from "react";
 import FriendlyDate from "./FriendlyDate";
 import WeatherTemperature from "./WeatherTemperature";
+import "./WeatherInfo.css";
 
 export default function WeatherInfo(props) {
   return (
