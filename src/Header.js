@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./Header.css";
+import logo_weathify_1 from "./logo_weathify_1.png";
 
 export default class Header extends Component {
   render() {
@@ -16,7 +17,7 @@ export default class Header extends Component {
             </div>
             <div className="col col-md-8">
               <img
-                src="https://lh3.googleusercontent.com/kxzd16RaHL1Dl8S1CjGpUSsNv3fM5bu8OsW1h_0tvxGl_mCrBkOi85_ew5oQf67bJZAspgeMF3YdoxLtSnjgeEldkNbCZmGzn9rwfuS8ebwuneU0r96ynfdbDnVNAmphcBwvoXIZYbfoAmJoaCkA051ZMxFj55Qp_14YGviMEe6mya18FQbSOsFYvsmV0SFDuBtSnD4LUXhQZxd_JL7CmVcqZnDWDjaweMAj6fx0cp0oaR9XfJBk8LB1eUq4vv2SdVqEVQMh08-W7NjOUjzfNNQQ2zJDHp6gvvwvisXNnzETilI5Tk_0Yt6La9W0srkH2ZhzgOJwKSw4LzolskX9bET2P9AXP8W7ZN6MVRVIbj8c4OzVfgfYj7VXvZhYIH-8Wzrzk8XPaiGL-e7tTD6HkRe8DnuD0LqwnK0pvVErQM0KHlLYic9XsGdxd9lPATn2-ahUDHllz9pKLCJji1PE-qZv1ddJHzJfqmkpb4z0Hz3dosJA8tSjROjv_yOolonnIddCXtdydHm484bJhFyMymtnyzWNCsBQ4M1WKVPdDELfD4YqC4r55iuZ7CJC1R4nrfxPB_2hvwDWYHkeiN-DfQUwpPm5viW07830hfa3qHA1G0FEHll6Gm_QzD-3FPwOToIx9JDZZ4tuhNChsVszr7PtjugEl9WNyP98iIvwptjLoNkLq2f9P-pYWFtx5g=s200-no"
+                src={logo_weathify_1}
                 className="logo-app"
                 alt="weathify logo"
               />
@@ -24,7 +25,7 @@ export default class Header extends Component {
                 The weather app for <strong>impulsive</strong> solo travelers
               </h2>
               <br />
-              <div className="container download">
+              <div className="containerdownload">
                 <button className="btn btn-dark">Download for Android</button>
                 <button className="btn btn-dark">Download for IOS</button>
               </div>
