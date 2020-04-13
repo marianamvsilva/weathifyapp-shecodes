@@ -1,13 +1,16 @@
 .Weather {
-  margin-bottom: 100px;
+  margin: 25px;
 }
 
+.form {
+  margin-bottom: 25px;
+}
 .searchbox {
   font-size: 15px;
   font-family: "Roboto", sans-serif;
   border-radius: 5px;
   border: none;
-  padding: 15px 20px;
+  padding: 15px 25px;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
 }
 
@@ -15,20 +18,20 @@
   font-size: 15px;
   display: block;
   background: #882eb3;
-  padding: 13px 15px;
+  padding: 13px 20px;
   color: white;
   border-radius: 5px;
   border: none;
   margin: 0 auto;
   font-family: "Roboto", sans-serif;
 }
-.container-weather {
-  margin: 50px 100px;
-}
+/*.container-weather {
+  margin: 50px 150px;
+}*/
 
-.Search {
+/*.Search {
   text-align: center;
-}
+}*/
 
 .slogan-section {
   padding: 10px;
