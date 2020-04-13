@@ -1,6 +1,5 @@
 .city-name {
   font-size: 40px;
-  font-family: "Roboto", sans-serif;
 }
 
 .WeatherInfo {
@@ -13,5 +12,4 @@
   color: gray;
   margin-top: 0rem;
   margin-bottom: 0rem;
-  font-family: "Roboto", sans-serif;
 }
