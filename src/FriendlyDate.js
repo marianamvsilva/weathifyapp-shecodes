@@ -1,4 +1,5 @@
 import React from "react";
+import "./WeatherInfo.css";
 
 export default function FriendlyDate(props) {
   let days = [
@@ -21,7 +22,7 @@ export default function FriendlyDate(props) {
     minutes = `0${minutes}`;
   }
   return (
-    <div>
+    <div className="data-items">
       {day} {hours}:{minutes}
     </div>
   );
