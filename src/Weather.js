@@ -44,7 +44,7 @@ export default function Weather(props) {
         <form className="form" onSubmit={handleSubmit}>
           <input
             type="text"
-            className="city"
+            className="searchbox"
             placeholder="I feel like going to..."
             autofocus="on"
             size="30"
@@ -74,7 +74,7 @@ export default function Weather(props) {
       <form className="form" onSubmit={handleSubmit}>
         <input
           type="text"
-          id="city"
+          className="searchbox"
           placeholder="I feel like going to..."
           autofocus="on"
           size="30"
