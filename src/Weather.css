@@ -1,5 +1,10 @@
-.Weather {
-  margin: 25px;
+.Weather-submit,
+.Weather-notsubmit {
+  padding-top: 20px;
+}
+
+.Weather-submit {
+  background: white;
 }
 
 .form {

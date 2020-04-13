@@ -40,7 +40,7 @@ export default function Weather(props) {
 
   if (weatherData.ready) {
     return (
-      <div className="Weather">
+      <div className="Weather-submit">
         <form className="form" onSubmit={handleSubmit}>
           <input
             type="text"
@@ -71,7 +71,7 @@ export default function Weather(props) {
     );
   } else {
     return (
-      <div className="Weather">
+      <div className="Weather-notsubmit">
         <form className="form" onSubmit={handleSubmit}>
           <input
             type="text"

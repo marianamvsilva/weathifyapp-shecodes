@@ -1,6 +1,7 @@
 .App {
   text-align: center;
   font-family: "Roboto", sans-serif;
+  background: #ffc44f;
 }
 
 .App-logo {
@@ -41,4 +42,5 @@
 footer {
   padding: 30px 0;
   background: #ffc44f;
+  margin-top: 20px;
 }
