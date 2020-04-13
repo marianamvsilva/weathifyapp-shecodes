@@ -3,15 +3,8 @@
 }
 
 h1 {
-  font-family: "Open Sans", sans-serif;
   font-size: 30px;
   color: black;
-}
-
-.weather h2 {
-  font-family: "Baloo Paaji 2", cursive;
-  font-size: 120px;
-  color: #882eb3;
 }
 
 .btn button {
