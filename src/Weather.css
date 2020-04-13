@@ -1,5 +1,5 @@
 .temperature {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Baloo Paaji 2", cursive;
   font-size: 100px;
   font-style: bold;
 }
@@ -14,8 +14,8 @@ h1 {
   color: black;
 }
 
-h2 {
-  font-family: "Montserrat", sans-serif;
+.weather h2 {
+  font-family: "Baloo Paaji 2", cursive;
   font-size: 120px;
   color: #882eb3;
 }
