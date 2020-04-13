@@ -1,4 +1,23 @@
 .WeatherForecast canvas {
+  display: initial;
+}
+
+.WeatherForecast {
   padding: 30px;
   display: block;
+  margin: 20px 0;
+  background-color: #ffc44f;
+  flex-basis: 0;
+  flex-grow: 1;
+  max-width: 100%;
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.container-forecast {
+  background-color: red;
+  display: initial;
+  width: 100%;
 }

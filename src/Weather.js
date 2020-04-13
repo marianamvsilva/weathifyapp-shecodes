@@ -54,7 +54,7 @@ export default function Weather(props) {
             <button>Take me there!</button>
           </div>
         </form>
-        <div className="container">
+        <div className="container container-weather">
           <div className="row">
             <div className="col-6">
               <WeatherInfo data={weatherData} />
@@ -65,7 +65,7 @@ export default function Weather(props) {
               <span className="text-capitalize">{weatherData.description}</span>
             </div>
           </div>
-          <WeatherForecast city={weatherData.city} />
+          <WeatherForecast city={weatherData.city} data={weatherData} />
         </div>
       </div>
     );

@@ -24,8 +24,8 @@ h1 {
   border: none;
   margin: 0 auto;
 }
-.container {
-  margin: 0px 100px;
+.container-weather {
+  margin: 50px 100px;
 }
 
 .Search {

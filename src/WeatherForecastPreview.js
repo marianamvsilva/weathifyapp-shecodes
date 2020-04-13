@@ -10,8 +10,8 @@ export default function WeatherForecastPreview(props) {
 
   return (
     <div className="WeatherForecastPreview col">
-      <WeatherIcon code={props.data.weather[0].icon} />
       <p>{hours()}</p>
+      <WeatherIcon code={props.data.weather[0].icon} />
       <p>
         {Math.round(props.data.main.temp)}
         ºC
