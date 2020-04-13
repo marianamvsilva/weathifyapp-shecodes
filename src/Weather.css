@@ -25,6 +25,11 @@ h1 {
   text-align: center;
 }
 
+.slogan-section {
+  padding: 10px;
+  text-align: left;
+}
+
 /*.weather-card {
   border-radius: 10px;
   padding: 0;
