@@ -40,42 +40,34 @@ export default function Weather(props) {
 
   if (weatherData.ready) {
     return (
-      <>
-        <div className="Search">
-          <form className="form" onSubmit={handleSubmit}>
-            <input
-              type="text"
-              id="city"
-              placeholder="I feel like going to..."
-              autofocus="on"
-              size="30"
-              onChange={updateCity}
-            />
-            <div className="btn">
-              <button>Take me there!</button>
+      <div className="Search">
+        <form className="form" onSubmit={handleSubmit}>
+          <input
+            type="text"
+            id="city"
+            placeholder="I feel like going to..."
+            autofocus="on"
+            size="30"
+            onChange={updateCity}
+          />
+          <div className="btn">
+            <button>Take me there!</button>
+          </div>
+        </form>
+        <div className="container container-weather">
+          <div className="row">
+            <div className="col-6">
+              <WeatherInfo data={weatherData} />
             </div>
-          </form>
-          <div className="container container-weather">
-            <div className="row">
-              <div className="col-6">
-                <WeatherInfo data={weatherData} />
-              </div>
-              <div className="col-6">
-                <WeatherSlogan data={weatherData} />
-                <img
-                  src={weatherData.icon}
-                  alt={weatherData.description}
-                />{" "}
-                <span className="text-capitalize">
-                  {weatherData.description}
-                </span>
-              </div>
+            <div className="col-6">
+              <WeatherSlogan data={weatherData} />
+              <img src={weatherData.icon} alt={weatherData.description} />{" "}
+              <span className="text-capitalize">{weatherData.description}</span>
             </div>
           </div>
-          <WeatherForecast city={weatherData.city} data={weatherData} />
         </div>
         <WeatherForecast city={weatherData.city} data={weatherData} />
-      </>
+      </div>
     );
   } else {
     return (

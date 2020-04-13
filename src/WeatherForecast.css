@@ -16,8 +16,6 @@
   padding-left: 15px;
 }
 
-.forecast {
-  background-color: red;
-  display: initial;
-  width: 100%;
+row {
+  margin-left: 0;
 }
