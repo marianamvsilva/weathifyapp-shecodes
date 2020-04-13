@@ -12,6 +12,8 @@ h1 {
   font-family: "Open Sans", sans-serif;
   font-size: 30px;
   color: red;
+  text-align: left;
+  padding: 0 70px;
 }
 
 .btn-dark {
