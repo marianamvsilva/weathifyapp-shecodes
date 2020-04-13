@@ -25,7 +25,7 @@ export default class Header extends Component {
                 The weather app for <strong>impulsive</strong> solo travelers
               </h2>
               <br />
-              <div className="containerdownload">
+              <div className="container download">
                 <button className="btn btn-dark">Download for Android</button>
                 <button className="btn btn-dark">Download for IOS</button>
               </div>

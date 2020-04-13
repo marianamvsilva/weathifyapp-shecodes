@@ -3,7 +3,7 @@
 }
 
 .logo-app {
-  display: block;
+  display: flex;
 }
 
 .Header h2 {
@@ -15,6 +15,7 @@
 .download {
   display: flex;
 }
+
 .btn-dark {
   margin: 5px;
 }
