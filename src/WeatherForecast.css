@@ -3,18 +3,12 @@
 }
 
 .WeatherForecast {
-  padding: 30px;
-  margin: 20px 0;
-  background-color: #ffc44f;
-  flex-basis: 0;
-  flex-grow: 1;
-  max-width: 100%;
-  position: relative;
-  width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
+  border-radius: 10px;
+  padding: 0;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+  margin: 20px 50px;
 }
-
-row {
-  margin-left: 0;
-}
+/*.row {
+  margin-right: 50px;
+  margin-left: 50px;
+}*/
