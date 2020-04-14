@@ -26,6 +26,10 @@
   margin: 0 auto;
 }
 
+.container-weather {
+  padding-top: 50px;
+}
+
 .slogan-section {
   padding: 10px;
   text-align: left;

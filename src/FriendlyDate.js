@@ -2,7 +2,7 @@ import React from "react";
 import "./WeatherInfo.css";
 
 export default function FriendlyDate(props) {
-  let days = [
+  let weekDays = [
     "Sunday",
     "Monday",
     "Tuesday",
@@ -11,7 +11,25 @@ export default function FriendlyDate(props) {
     "Friday",
     "Saturday",
   ];
-  let day = days[props.date.getDay()];
+  let weekDay = weekDays[props.date.getDay()];
+
+  let monthNames = [
+    "Jan",
+    "Feb",
+    "March",
+    "April",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec",
+  ];
+
+  let month = monthNames[props.date.getMonth()];
+
   let hours = props.date.getHours();
   if (hours < 10) {
     hours = `0${hours}`;
@@ -23,7 +41,7 @@ export default function FriendlyDate(props) {
   }
   return (
     <div className="data-items">
-      {day} {hours}:{minutes}
+      {weekDay} {hours}:{minutes}, {month} {props.date.getDate()}
     </div>
   );
 }
