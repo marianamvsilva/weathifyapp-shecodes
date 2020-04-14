@@ -7,11 +7,6 @@
   display: flex;
 }
 
-h1 {
-  font-size: 30px;
-  color: black;
-}
-
 .Header h2 {
   font-size: 30px;
   text-align: left;
